@@ -46,7 +46,7 @@ public class RequestInterceptor implements HandlerInterceptor {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         // 1. 获取token
         String authorization = request.getHeader("Authorization");
-        // 2. 验证token  (不为null 且 开头为"Bearer ",签发的时候是以"Bearer "开头,后面再接token实际值-业界统一这样做,也不知道为啥)
+        // 2. 验证token  (不为null 且 开头为"Bearer ",请求的时候是以"Bearer "开头,后面再接token实际值-业界统一这样做,也不知道为啥)
         if (!StringUtils.isEmpty(authorization) && authorization.startsWith("Bearer ")) {
             String token = authorization.replace("Bearer ", "");
             Claims claims = null;

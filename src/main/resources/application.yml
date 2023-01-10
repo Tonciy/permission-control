@@ -22,11 +22,16 @@ mybatis-plus:
     db-config:
       id-type: ASSIGN_ID
 
+
+
+# jwt签发的有效时长以及加密key
 jwt:
   config:
     key: zero
     ttl: 1800
 
+
+# 存储在 Redis中的前缀
 redis:
   user:
     prefix: user-login-status-
