@@ -14,8 +14,6 @@ spring:
     host: localhost
     port: 6379
 
-
-
 mybatis-plus:
   configuration:
     map-underscore-to-camel-case: true
@@ -23,7 +21,6 @@ mybatis-plus:
   global-config:
     db-config:
       id-type: ASSIGN_ID
-
 
 jwt:
   config:
